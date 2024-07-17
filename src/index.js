@@ -11,13 +11,15 @@ let chart;
 // Get data from API
 async function getData() {
   try {
-    const res = await fetch("http://localhost:8000/data");
+    const res = await fetch("../db.json");
 
     if (!res.ok) {
       throw new Error(res.status);
     }
 
     const data = await res.json();
+
+    console.log(data);
 
     customers = data.customers;
     transactions = data.transactions;
