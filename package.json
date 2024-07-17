@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "api": "json-server db.json -p 8000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.5"
+  }
+}

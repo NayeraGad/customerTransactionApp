@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Transaction App</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+
+  <body class="bg-gradient-to-br from-sky-200 to-sky-50 text-black">
+    <div class="container min-h-screen py-14">
+      <h1 class="text-center text-4xl text-sky-700">
+        Customer Transaction App
+      </h1>
+
+      <div id="content" class="pt-32">
+        <!-- Search Input -->
+        <div class="search relative">
+          <input
+            type="text"
+            id="filterInput"
+            class="w-full p-4 ring-2 ring-inset ring-sky-600 rounded-lg focus:ring-sky-500 lg:p-6 lg:text-xl"
+            placeholder="Search by name or amount"
+          />
+          <button class="btn absolute top-0 right-0">Search</button>
+        </div>
+
+        <!-- Displayed Table -->
+        <div class="content-table">
+          <div
+            class="table-header flex items-center text-center mt-7 shadow-md bg-sky-600 text-white rounded-lg"
+          >
+            <div class="customer-name w-3/12 p-3">
+              <h2 class="sm:text-lg md:text-xl xl:text-2xl">Number</h2>
+            </div>
+            <div class="customer-name w-3/12 p-3">
+              <h2 class="sm:text-lg md:text-xl xl:text-2xl">Customer Name</h2>
+            </div>
+            <div class="transaction w-3/12 p-3">
+              <h2 class="sm:text-lg md:text-xl xl:text-2xl">
+                Transaction Amount
+              </h2>
+            </div>
+            <div class="date w-3/12 p-3">
+              <h2 class="sm:text-lg md:text-xl xl:text-2xl">Date</h2>
+            </div>
+          </div>
+
+          <div
+            class="table-body flex flex-wrap justify-center mt-4 items-center text-center shadow-md bg-sky-50 rounded-lg"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div id="chart-container" class="mt-2">
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <!-- Chart.js CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+      <!-- Main JS -->
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>
